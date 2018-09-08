@@ -12,10 +12,16 @@ namespace Codility.Implementations.DemoTask
             if (AOrdenado.Count == 0)
                 return 1;
 
-            var numerosSequenciais = Enumerable.Range(1, AOrdenado.Count).ToList();
-            var numerosFaltantes = new List<int>(AOrdenado.Count);
+            var total = AOrdenado.Count;
+            var numerosSequenciais = new List<int>(total);
+            var numerosFaltantes = new List<int>(total);
 
-            for (int i = 0; i < AOrdenado.Count; i++)
+            for (int i = 1; i < AOrdenado.Count + 1; i++)
+            {
+                numerosSequenciais.Add(i);
+            }
+
+            for (int i = 0; i < total; i++)
             {
                 if (!AOrdenado.Contains(numerosSequenciais[i]))
                     numerosFaltantes.Add(numerosSequenciais[i]);
