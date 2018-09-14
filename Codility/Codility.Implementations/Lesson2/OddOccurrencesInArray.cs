@@ -17,7 +17,7 @@ namespace Codility.Implementations.Lesson2
                     numerosComPares.Add(A[i], false);
             }
 
-            return numerosComPares.Keys.ToList()[0];
+            return numerosComPares.ElementAt(0).Key;
         }
     }
 }
