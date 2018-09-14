@@ -9,7 +9,7 @@ namespace Codility.Test.Lesson2
         public void Case1()
         {
             // Arrange
-            var arrayInput = new int[] { 0, 3, 9 };
+            var arrayInput = new int[] { 9, 3, 9 , 3, 9, 7, 9};
             var algorithm = new OddOccurrencesInArray();
 
             // Act
