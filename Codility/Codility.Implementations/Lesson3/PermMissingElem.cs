@@ -6,8 +6,28 @@ namespace Codility.Implementations.Lesson3
     {
         public int solution(int[] A)
         {
-            // verificar o caso de 0, 1 ou 2 elementos
+            var total = A.Length;
+            int result = 1;
+            A = A.OrderBy(x => x).ToArray();
 
+            for (int i = 0; i < total; i++)
+            {
+                if (A[i] == result)
+                {
+                    result++;
+                }
+                else if (A[i] > result)
+                {
+                    return result;
+                }
+            }
+
+            return result;
+        }
+
+        public int solution2(int[] A)
+        {
+            // verificar o caso de 0, 1 ou 2 elementos
             var sortedA = A.OrderBy(x => x).ToArray();
 
             for (int i = 0; i < sortedA.Count(); i++)

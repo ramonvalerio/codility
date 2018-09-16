@@ -9,7 +9,7 @@ namespace Codility.Test.DemoTask
         public void Case1()
         {
             // Arrange
-            var algorithm = new DemoTask01();
+            var algorithm = new DemoTask02();
             var A = new int[] { 1, 3, 6, 4, 1, 2 };
 
             // Act
