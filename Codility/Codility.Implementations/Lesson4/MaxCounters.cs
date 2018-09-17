@@ -10,13 +10,21 @@ namespace Codility.Implementations.Lesson4
 
             for (int x = 0; x < N; x++)
             {
+                int counter = 0;
+
                 for (int k = 0; k < A.Length; k++)
                 {
-                    if (A[k] == x && 1 <= x && x <= N)
+                    if (A[k] <= 1 && A[k] <= N)
                     {
-                        counters[x] = counters[x] + 1;
+                        A[k] = A[k] + 1;
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
+
+                counters[x] = counter;
             }
 
             return counters;
